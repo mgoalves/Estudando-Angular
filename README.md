@@ -10,6 +10,8 @@ parar e subir o server.
 
 # CLI
 
+ng new [nomeProjeto]
+
 ng g(enerate) c(omponent) [nome]
 ng g(enerate) m(odule) [nome]
 ng g(enerate) s(ervice) [nome]

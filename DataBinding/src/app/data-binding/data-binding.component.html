@@ -1,0 +1,17 @@
+<section>
+
+  <article>
+    <h3>Interpolação!</h3>
+    <p>String: {{ url }}</p>
+    <p>Expressões: {{ 1 + 1 }} e {{ 1 + 1 + getValor() }}</p>
+    <p>Expressões Lógicas: {{ like || getFalse() }}, {{ like && getFalse() }},
+      {{ !getFalse() }}</p>
+  </article>
+
+  <article>
+    <h3>Property DataBinding!</h3>
+    <img src="{{ urlImagem }}" alt="">
+    <img [src]="urlImagem" alt="">
+    <img bind-src="urlImagem" alt="">
+  </article>
+</section>

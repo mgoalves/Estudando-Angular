@@ -11,6 +11,9 @@ export class DataBindingComponent implements OnInit {
   url: string = 'http://github.com/mgoalves';
   like: boolean = true;
   urlImagem: string = 'http://lorempixel.com/400/200/nature/';
+  valorAtual: string = '';
+  valorSalvo: string = '';
+  isMouseOver: boolean = false;
 
   constructor() { }
 
@@ -22,5 +25,20 @@ export class DataBindingComponent implements OnInit {
   }
   getFalse(): boolean {
     return false;
+  }
+
+  mostraLog(){
+    console.log('Funcionou!');
+  }
+
+  mostraEvento(evento){
+    this.valorAtual = evento.target.value;
+  }
+  salvarValor(evento){
+    this.valorSalvo = evento;
+  }
+
+  onMouseOverOut(){
+    this.isMouseOver = !this.isMouseOver;
   }
 }

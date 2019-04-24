@@ -14,7 +14,7 @@
     <img [src]="urlImagem" alt="">
     <img bind-src="urlImagem" alt="">
   </article>
-  -->
+  
   <article>
     <h3>Class e Style DataBinding!</h3>
     <div>
@@ -41,5 +41,26 @@
     <div class="alert alert-danger" role="alert" [style.display]="classe.value
       == 'alert-danger' ? 'block' : 'none'">Esse texto em caso de Danger</div>
   </article>
+  -->
+  <article>
+    <h3>Event DataBinding!</h3>
+    <div>
+      <button (click)="mostraLog()" class="btn btn-primary">Entrar</button>
+    </div>
+    <br>
+
+    <input type="text" (keyup)="mostraEvento($event)"
+      (keyup.enter)="salvarValor($event.target.value)"
+      (blur)="salvarValor($event.target.value)" />
+    <p>Valor Atual: {{ valorAtual }}</p>
+    <p>Valor Salvo: {{ valorSalvo }}</p>
+    <br>
+    <span (mouseover)="onMouseOverOut()"
+      (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">
+      Passe o mouse em cima!
+    </span>
+
+  </article>
+
 
 </section>

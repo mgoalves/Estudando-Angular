@@ -6,7 +6,12 @@
 	no AppModule, não esquecer de no exports colocar a classe.
 	
 3 - Sempre que fizer alteração nas classes de módulos e configurações,
-parar e subir o server.
+	parar e subir o server.
+
+4 - Bindings: 
+		() -> Template para o Componente 
+		[] -> Componente para o Template
+		[()] -> Ambos 
 
 # CLI
 

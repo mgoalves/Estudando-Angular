@@ -41,7 +41,7 @@
     <div class="alert alert-danger" role="alert" [style.display]="classe.value
       == 'alert-danger' ? 'block' : 'none'">Esse texto em caso de Danger</div>
   </article>
-  -->
+  
   <article>
     <h3>Event DataBinding!</h3>
     <div>
@@ -61,6 +61,25 @@
     </span>
 
   </article>
+-->
+  <article>
+    <h3>Two Way DataBinding!</h3>
+    <div>
 
+      <input type="text"
+        [value]="nome"
+        (input)="nome= $event.target.value"
+        />
+      <input type="text" [ngModel]="nome" (ngModelChange)="nome= $event" />
+      <input type="text" [(ngModel)]="nome" />
+      <p>Você Digitou: {{ nome }}</p>
+
+      <input type="text" [(ngModel)]="pessoa.nome" />
+      <input type="text" [(ngModel)]="pessoa.idade" />
+      <p>Nome: {{ pessoa.nome }}. Idade: {{ pessoa.idade }}</p>
+
+    </div>
+
+  </article>
 
 </section>

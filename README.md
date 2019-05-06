@@ -16,6 +16,8 @@
 # CLI
 
 ng new [nomeProjeto]
+cd [nomeProjeto]
+ng serve
 
 ng g(enerate) c(omponent) [nome]
 ng g(enerate) m(odule) [nome]

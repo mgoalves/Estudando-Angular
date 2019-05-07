@@ -39,6 +39,9 @@ ng lint
 ng test
 ng e2e 
 
+ng build 
+ng build --prod (mimificado)
+
 # Diretórios
 
 e2e          - Configurações de testes

@@ -1,5 +1,7 @@
 # Anotações:
 
+Docs: https://angular.io/docs
+
 1 - Ao criar um módulo, precisa importar no AppModule.
 
 2 - Caso queira usar algum componente dentro de um módulo qualquer 
@@ -13,8 +15,9 @@
 		[] -> Componente para o Template
 		[()] -> Ambos 
 
- 5 - A biblioteca padrão de testes padrão é o Jasmine
-	 (jasmine.github.io)	
+ 5 - Testes:
+ 	 Unitário = Jasmine (jasmine.github.io)	e o Karma
+	 Integração = Protractor 
 
 
 # CLI
@@ -35,3 +38,9 @@ ng g(enerate) i(nterface) [nome]
 ng lint
 ng test
 ng e2e 
+
+# Diretórios
+
+e2e          - Configurações de testes
+node_modules - Bibliotecas
+environment  - Config de deploy/build

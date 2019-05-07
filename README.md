@@ -21,4 +21,9 @@ ng serve
 
 ng g(enerate) c(omponent) [nome]
 ng g(enerate) m(odule) [nome]
-ng g(enerate) s(ervice) [nome]
+ng g(enerate) s(ervice) [nome]]
+ng g(enerate) d(irective) [nome]
+ng g(enerate) p(ipe) [nome]
+ng g(enerate) c(lass) [nome]
+ng g(enerate) e(num) [nome]
+ng g(enerate) i(nterface) [nome]

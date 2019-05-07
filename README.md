@@ -13,6 +13,10 @@
 		[] -> Componente para o Template
 		[()] -> Ambos 
 
+ 5 - A biblioteca padrão de testes padrão é o Jasmine
+	 (jasmine.github.io)	
+
+
 # CLI
 
 ng new [nomeProjeto]
@@ -27,3 +31,7 @@ ng g(enerate) p(ipe) [nome]
 ng g(enerate) c(lass) [nome]
 ng g(enerate) e(num) [nome]
 ng g(enerate) i(nterface) [nome]
+
+ng lint
+ng test
+ng e2e 

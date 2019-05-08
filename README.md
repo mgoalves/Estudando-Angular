@@ -22,7 +22,11 @@ Docs: https://angular.io/docs
 6 - Diretivas:
 	*ngIf -> Quando utilizar uma árvore DOM muito grande, caso contrário 
 			 usar o hidden para melhor performance.
-	
+	[ngSwitch] -> *ngSwitchCase e *ngSwitchDefault
+
+7 - Bootstrap
+	1º) npm install --save bootstrap
+	2º) No arquivo angular.json em styles add: "node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 # CLI
 

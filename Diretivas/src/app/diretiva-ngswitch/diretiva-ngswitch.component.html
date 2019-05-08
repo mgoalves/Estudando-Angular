@@ -1,0 +1,14 @@
+<nav class="nav">
+  <a class="nav-link" href="#" [class.active]="page == 'home'" (click)="page=
+    'home'">Home</a>
+  <a class="nav-link" href="#" [class.active]="page == 'mapa'" (click)="page=
+    'mapa'">Mapa</a>
+  <a class="nav-link" href="#" [class.active]="page == 'lista'" (click)="page=
+    'lista'">Lista</a>
+</nav>
+
+<div class="container" [ngSwitch]="page">
+  <p *ngSwitchCase="'mapa'">MAPA</p>
+  <p *ngSwitchCase="'lista'">LISTA</p>
+  <p *ngSwitchDefault>HOME</p>
+</div>

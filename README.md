@@ -19,6 +19,10 @@ Docs: https://angular.io/docs
  	 Unitário = Jasmine (jasmine.github.io)	e o Karma
 	 Integração = Protractor 
 
+6 - Diretivas:
+	*ngIf -> Quando utilizar uma árvore DOM muito grande, caso contrário 
+			 usar o hidden para melhor performance.
+	
 
 # CLI
 

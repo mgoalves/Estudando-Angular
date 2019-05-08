@@ -1,3 +1,14 @@
-<p>
-  diretiva-ngif works!
-</p>
+<h5>*ngif</h5>
+
+<div *ngIf="listaCursos.length > 0">Tem cursos</div>
+<div *ngIf="listaCursos.length == 0">Não tem cursos</div>
+
+<div *ngIf="flagCursoPresencial">Presencial</div>
+<div *ngIf="!flagCursoPresencial">Não presencial</div>
+
+<h5>Hidden</h5>
+
+<div [hidden]="flagCursoPresencial">Presencial</div>
+<div [hidden]="!flagCursoPresencial">Não presencial</div>
+
+<button (click)="mudarFlagCurso()">Mudar Valor</button>

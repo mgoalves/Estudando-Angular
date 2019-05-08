@@ -1,0 +1,11 @@
+<h5>ngClass</h5>
+
+<i class="glyphicon" [class.glyphicon-star-empty]="flagFavorito"
+  [class.glyphicon-star]="!flagFavorito" (click)="onMarcar()"></i>
+
+<br><br>
+
+<i class="glyphicon" [ngClass]="{
+  'glyphicon-star-empty': flagFavorito,
+  'glyphicon-star': !flagFavorito
+  }" (click)="onMarcar()"></i>

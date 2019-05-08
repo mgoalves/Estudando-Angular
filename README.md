@@ -16,12 +16,14 @@ Docs: https://angular.io/docs
 		[()] -> Ambos 
 
  5 - Testes:
- 	 Unitário = Jasmine (jasmine.github.io)	e o Karma
+ 	 Unitário   = Jasmine (jasmine.github.io)	e o Karma
 	 Integração = Protractor 
 
 6 - Diretivas:
 	*ngIf -> Quando utilizar uma árvore DOM muito grande, caso contrário 
 			 usar o hidden para melhor performance.
+	*ngFor ->  Exemplo: *ngFor="let curso of listaCursos; let i=index" 
+	           a palavra reservada index retorna o index (rs rs)
 	[ngSwitch] -> *ngSwitchCase e *ngSwitchDefault
 
 7 - Bootstrap

@@ -25,6 +25,7 @@ Docs: https://angular.io/docs
 	*ngFor ->  Exemplo: *ngFor="let curso of listaCursos; let i=index" 
 	           a palavra reservada index retorna o index (rs rs)
 	[ngSwitch] -> *ngSwitchCase e *ngSwitchDefault
+	[ngClass] ->
 
 7 - Bootstrap
 	1º) npm install --save bootstrap

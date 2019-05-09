@@ -1,0 +1,17 @@
+<h5>ngStyle</h5>
+
+<button
+  [style.backgroundColor]="ativo ? 'black' : 'white'"
+  [style.color]="ativo ? 'white' : 'black'"
+  [style.fontSize]="tamanho + 'px'"
+  (click)="mudarValor()">Mudar</button>
+
+
+<input type="text" [(ngModel)]="tamanho" />
+
+<button [ngStyle]="{
+  'backgroundColor': (ativo ? 'black' : 'white'),
+  'color': (ativo ? 'white' : 'black'),
+  'fontSize': (tamanho + 'px')
+  }"
+  (click)="mudarValor()">Mudar</button>

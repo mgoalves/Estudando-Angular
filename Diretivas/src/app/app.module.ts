@@ -1,3 +1,4 @@
+import { HighlightMouseDirective } from './directives/highlight-mouse.directive';
 import { FundoVerdeDirective } from './directives/fundo-verde.directive';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -25,7 +26,8 @@ import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretiv
     OperadorElvisComponent,
     NgcontentComponent,
     FundoVerdeDirective,
-    DiretivasCustomizadasComponent
+    DiretivasCustomizadasComponent,
+    HighlightMouseDirective
   ],
   imports: [
     BrowserModule,

@@ -36,6 +36,9 @@ Docs: https://angular.io/docs
 8 - Operador Elvis é muito bom pois não precisa fazer operações ternárias.
     Reduz a quantidade de código e aumenta a legibilidade.
 
+9 - Ao passar parâmetros pro < ngContent > sempre atribuir o seletor que será uma 
+	classe. O que n tiver a classe o ngContent simplesmente ignora.
+
 # CLI
 
 ng new [nomeProjeto]

@@ -2,7 +2,8 @@
 
 Docs: https://angular.io/docs
 
-1 - Ao criar um módulo, precisa importar no AppModule.
+1 - Ao criar um módulo, precisa importar no AppModule. Caso crie no AngularCli 
+    o import é automático.
 
 2 - Caso queira usar algum componente dentro de um módulo qualquer 
 	no AppModule, não esquecer de no exports colocar a classe.
@@ -25,11 +26,15 @@ Docs: https://angular.io/docs
 	*ngFor ->  Exemplo: *ngFor="let curso of listaCursos; let i=index" 
 	           a palavra reservada index retorna o index (rs rs)
 	[ngSwitch] -> *ngSwitchCase e *ngSwitchDefault
-	[ngClass] ->
+	[ngClass] -> "{'propriedade' : valor, 'propriedade2': (valorCondicional)}"
+	[ngStyle] -> "{'propriedade' : valor, 'propriedade2': (valorCondicional)}"
 
 7 - Bootstrap
 	1º) npm install --save bootstrap
 	2º) No arquivo angular.json em styles add: "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+8 - Operador Elvis é muito bom pois não precisa fazer operações ternárias.
+    Reduz a quantidade de código e aumenta a legibilidade.
 
 # CLI
 
@@ -39,7 +44,7 @@ ng serve
 
 ng g(enerate) c(omponent) [nome]
 ng g(enerate) m(odule) [nome]
-ng g(enerate) s(ervice) [nome]]
+ng g(enerate) s(ervice) [nome]
 ng g(enerate) d(irective) [nome]
 ng g(enerate) p(ipe) [nome]
 ng g(enerate) c(lass) [nome]

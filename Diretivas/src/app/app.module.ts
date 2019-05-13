@@ -15,6 +15,7 @@ import { OperadorElvisComponent } from './operador-elvis/operador-elvis.componen
 import { NgcontentComponent } from './ngcontent/ngcontent.component';
 import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretivas-customizadas.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { NgElseDirective } from './directives/ng-else.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     FundoVerdeDirective,
     DiretivasCustomizadasComponent,
     HighlightMouseDirective,
-    HighlightDirective
+    HighlightDirective,
+    NgElseDirective
   ],
   imports: [
     BrowserModule,

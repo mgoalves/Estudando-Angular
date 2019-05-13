@@ -4,11 +4,15 @@
 <div *ngIf="listaCursos.length == 0">Não tem cursos</div>
 
 <div *ngIf="flagCursoPresencial">Presencial</div>
-<div *ngIf="!flagCursoPresencial">Não presencial</div>
+<div *ngElse="flagCursoPresencial">Não presencial</div>
+
+<br>
 
 <h5>Hidden</h5>
 
 <div [hidden]="flagCursoPresencial">Presencial</div>
 <div [hidden]="!flagCursoPresencial">Não presencial</div>
 
+
+<br>
 <button (click)="mudarFlagCurso()">Mudar Valor</button>

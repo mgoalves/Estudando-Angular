@@ -1,0 +1,13 @@
+<h1>Com Pipes</h1>
+<p>{{ livro.titulo | lowercase }}</p>
+<p>{{ livro.rating | number:'.2' }}</p>
+<p>{{ livro.numPaginas }}</p>
+<p>{{ livro.preco | currency:'BRL':true }}</p>
+<p>{{ livro.dataLancamento | date:'dd-MM-yyyy' }}</p>
+
+<h1>Sem Pipes</h1>
+<p>{{ livro.titulo }}</p>
+<p>{{ livro.rating }}</p>
+<p>{{ livro.numPaginas }}</p>
+<p>{{ livro.preco }}</p>
+<p>{{ livro.dataLancamento }}</p>

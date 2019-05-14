@@ -1,3 +1,4 @@
+import { LogService } from './log.service';
 import { CursosService } from './cursos/cursos.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,7 @@ import { CriarCursoComponent } from './criar-curso/criar-curso.component';
   ],
   providers: [
     // CursosService
+    LogService
   ],
   bootstrap: [AppComponent]
 })

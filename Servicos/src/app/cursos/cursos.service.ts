@@ -1,7 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 
 @Injectable()
 export class CursosService {
+
+    static addNovoCurso = new EventEmitter<string>();
 
     cursos: string[] = ['Angular', 'WordPress'];
 
@@ -15,5 +17,6 @@ export class CursosService {
 
     addCurso(curso: string) {
         this.cursos.push(curso);
+        CursosService.addNovoCurso.emit(curso);
     }
 }

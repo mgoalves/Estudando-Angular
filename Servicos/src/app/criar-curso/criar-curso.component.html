@@ -1,0 +1,7 @@
+
+<input type="text" #inputCurso>
+<button (click)="addCurso(inputCurso.value)">ADD CURSO</button>
+
+<div *ngFor="let curso of cursos">
+  {{ curso }}
+</div>

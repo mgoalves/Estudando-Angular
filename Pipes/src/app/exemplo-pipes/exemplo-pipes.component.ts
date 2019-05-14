@@ -9,8 +9,8 @@ export class ExemploPipesComponent implements OnInit {
 
 
   livro: any = {
-    
-    titulo: 'Titulo',
+
+    titulo: 'Titulo Meu Bom o certo',
     rating: 4.5,
     numPaginas: 245,
     preco: 23.99,

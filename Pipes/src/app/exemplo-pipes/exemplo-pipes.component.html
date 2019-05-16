@@ -11,3 +11,14 @@
 <p>{{ livro.numPaginas }}</p>
 <p>{{ livro.preco }}</p>
 <p>{{ livro.dataLancamento }}</p>
+
+<h1>Pipe Puro</h1>
+<input type="text" #livroAdd>
+<button (click)="addLivro(livroAdd.value)">AdicionarLivro</button>
+<br>
+<label for="filtro">Filtro: </label>
+<input type="text" id="filtro" [(ngModel)]="filtro">
+<br>
+<div *ngFor="let liv of livros | filtroArray:filtro">
+    {{ liv }}
+</div>

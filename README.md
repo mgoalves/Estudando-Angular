@@ -47,6 +47,9 @@ Docs: https://angular.io/docs
 	 registerLocaleData(localePt, 'pt'); - Antes da anotação @NgModule
 	 {provide: LOCALE_ID, useValue: 'pt'} - Dentro dos providers
 
+12 - Ao criar um projeto verificar se no AppModule, nos imports foi adicionado
+     o FormsModule que é responsável por um bocado de coisa importante.
+
 # CLI
 
 ng new [nomeProjeto]

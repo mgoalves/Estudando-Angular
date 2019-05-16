@@ -50,6 +50,8 @@ Docs: https://angular.io/docs
 12 - Ao criar um projeto verificar se no AppModule, nos imports foi adicionado
      o FormsModule que é responsável por um bocado de coisa importante.
 
+13 - Nunca usar Pipes para realizar OrderBy ou Filtros.
+
 # CLI
 
 ng new [nomeProjeto]

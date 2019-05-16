@@ -8,6 +8,7 @@ import localePt from '@angular/common/locales/pt';
 import { AppComponent } from './app.component';
 import { ExemploPipesComponent } from './exemplo-pipes/exemplo-pipes.component';
 import { FiltroArrayPipe } from './filtro-array.pipe';
+import { FiltroArrayImpuroPipe } from './filtro-array-impuro.pipe';
 
 
 
@@ -18,7 +19,8 @@ registerLocaleData(localePt, 'pt');
     AppComponent,
     ExemploPipesComponent,
     CamelCasePipe,
-    FiltroArrayPipe
+    FiltroArrayPipe,
+    FiltroArrayImpuroPipe
   ],
   imports: [
     BrowserModule,

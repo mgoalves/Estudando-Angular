@@ -39,4 +39,9 @@ export class ExemploPipesComponent implements OnInit {
     );
   }
 
+  valorAsync = new Promise((resolve, reject) => {
+
+      setTimeout(() => resolve('Valor Assíncrono'), 5000);
+   });
+
 }

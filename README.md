@@ -43,6 +43,10 @@ Docs: https://angular.io/docs
 	 https://angular.io/api - Commom
 	 Tem os pipes disponíveis pelo Angular.
 
+11 - Definindo LOCALE para a aplicação. No AppModule adicionar:
+	 registerLocaleData(localePt, 'pt'); - Antes da anotação @NgModule
+	 {provide: LOCALE_ID, useValue: 'pt'} - Dentro dos providers
+
 # CLI
 
 ng new [nomeProjeto]

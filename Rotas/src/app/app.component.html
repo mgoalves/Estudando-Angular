@@ -4,9 +4,14 @@
     <ul id="nav-mobile" class="left hide-on-med-and-down">
       <li routerLinkActive="active"><a [routerLink]="['login']">Login</a></li>
       <li routerLinkActive="active"><a [routerLink]="['cursos']">Cursos</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['curso', idCurso.value]">Cursos
+          com ID</a></li>
     </ul>
   </div>
 </nav>
 
+<div>
+  <input #idCurso>
+</div>
 
 <router-outlet></router-outlet>

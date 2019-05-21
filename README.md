@@ -29,10 +29,6 @@ Docs: https://angular.io/docs
 	[ngClass] -> "{'propriedade' : valor, 'propriedade2': (valorCondicional)}"
 	[ngStyle] -> "{'propriedade' : valor, 'propriedade2': (valorCondicional)}"
 
-07 - Bootstrap
-	1º) npm install --save bootstrap
-	2º) No arquivo angular.json em styles add: "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
 08 - Operador Elvis é muito bom pois não precisa fazer operações ternárias.
     Reduz a quantidade de código e aumenta a legibilidade.
 
@@ -79,3 +75,15 @@ ng build --prod (mimificado)
 e2e          - Configurações de testes
 node_modules - Bibliotecas
 environment  - Config de deploy/build
+
+# Dependências
+
+01 - Bootstrap
+	1º) npm install --save bootstrap
+	2º) No arquivo angular.json em styles add: "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
+02 - MaterializeCSS
+	 1º) npm install materialize-css --save
+	 2º) npm install angular2-materialize --save
+	 3º) No arquivo angular.json em styles add: "node_modules/materialize-css/dist/css/materialize.css"
+	 4º) No index.html adicionar os icons: <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

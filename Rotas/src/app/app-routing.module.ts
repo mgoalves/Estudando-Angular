@@ -1,3 +1,4 @@
+import { CursoNaoEncotradoComponent } from './curso-nao-encotrado/curso-nao-encotrado.component';
 import { CursoDetalhesComponent } from './curso-detalhes/curso-detalhes.component';
 import { LoginComponent } from './login/login.component';
 import { CursosComponent } from './cursos/cursos.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'curso/:id', component: CursoDetalhesComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'cursoNaoEncontrado', component: CursoNaoEncotradoComponent }
 ];
 
 @NgModule({

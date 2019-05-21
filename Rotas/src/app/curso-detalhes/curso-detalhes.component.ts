@@ -1,5 +1,6 @@
+import { CursosService } from './../cursos/cursos.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -9,16 +10,22 @@ import { Subscription } from 'rxjs';
 })
 export class CursoDetalhesComponent implements OnInit {
 
-	id: number;
+	curso: any;
 	subscriptionActive: Subscription;
 
-	constructor(private activatedRoute: ActivatedRoute) {
+
+	constructor(private activatedRoute: ActivatedRoute, private cursosService: CursosService, private router: Router) {
 	}
 
 	ngOnInit() {
 
 		this.subscriptionActive = this.activatedRoute.params.subscribe(
-			(params) => { this.id = params['id'] }
+			(params) => {
+				this.curso = this.cursosService.getCurso(params['id']);
+				if (this.curso === null) {
+					this.router.navigate(['/cursoNaoEncontrado']);
+				}
+			}
 		);
 	}
 

@@ -1,4 +1,5 @@
-import { CursosModule } from './cursos/cursos.module';
+import { AlunosModule } from './aluno/alunos.module';
+import { CursosModule } from './curso/cursos.module';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +19,8 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CursosModule
+    CursosModule,
+    AlunosModule
   ],
   providers: [
   ],

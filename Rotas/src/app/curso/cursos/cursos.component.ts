@@ -1,8 +1,7 @@
+import { CursosService } from '../cursos.service';
 import { Subscription } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CursosService } from './cursos.service';
-import { query } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-cursos',

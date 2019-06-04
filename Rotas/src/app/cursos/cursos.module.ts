@@ -1,5 +1,5 @@
+import { CursosRoutingModule } from './cursos-routing.module';
 import { CursosService } from './cursos.service';
-import { RouterModule } from '@angular/router';
 import { CursosComponent } from './cursos.component';
 import { CursoDetalhesComponent } from './curso-detalhes/curso-detalhes.component';
 import { CursoNaoEncotradoComponent } from './curso-nao-encotrado/curso-nao-encotrado.component';
@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
     ],
     imports: [
         CommonModule,
-        RouterModule
+        CursosRoutingModule
     ],
     exports: [],
     providers: [

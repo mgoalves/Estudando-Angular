@@ -1,6 +1,6 @@
-import { UsuarioComponent } from './../model/usuario.class.component';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Injectable, EventEmitter } from '@angular/core';
+import { UsuarioComponent } from './../model/usuario.class.component';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +26,9 @@ export class LoginService {
 
       this.usuarioLogado = false;
     }
+  }
+
+  isUsuarioLogado(): boolean {
+    return this.usuarioLogado;
   }
 }

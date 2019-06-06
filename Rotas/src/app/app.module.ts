@@ -1,3 +1,4 @@
+import { AlunosGuard } from './guards/alunos.guard';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginService } from './login/login.service';
 import { NgModule } from '@angular/core';
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
   ],
   providers: [
     LoginService,
-    AuthGuard
+    AuthGuard,
+    AlunosGuard
   ],
   bootstrap: [AppComponent]
 })

@@ -34,7 +34,6 @@ export class AlunosDetalhesComponent implements OnInit, OnDestroy {
   }
 
   editarAluno() {
-    console.log('navegou');
     this.router.navigate(['alunos', this.aluno.id, 'editar']);
   }
 }

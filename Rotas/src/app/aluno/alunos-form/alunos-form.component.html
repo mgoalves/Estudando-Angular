@@ -10,7 +10,7 @@
 <div class="row">
   <div class="input-field col s12">
     <label for="nome" class="active">Nome</label>
-    <input id="nome" [(ngModel)]="aluno.name" type="text" class="validate">
+    <input id="nome" [(ngModel)]="aluno.name" type="text" class="validate" (input)="mudarValor()">
   </div>
 </div>
 <div class="row">

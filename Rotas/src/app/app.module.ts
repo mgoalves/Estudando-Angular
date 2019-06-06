@@ -1,3 +1,4 @@
+import { AlunosDeactivateGuard } from './guards/alunos-deactive.guard';
 import { AlunosGuard } from './guards/alunos.guard';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginService } from './login/login.service';
@@ -24,7 +25,8 @@ import { LoginComponent } from './login/login.component';
   providers: [
     LoginService,
     AuthGuard,
-    AlunosGuard
+    AlunosGuard,
+    AlunosDeactivateGuard
   ],
   bootstrap: [AppComponent]
 })

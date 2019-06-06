@@ -15,7 +15,11 @@ export class AlunosGuard implements CanActivateChild {
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
 
-    alert('Você não tem autorização para acessar essa página');
-    return false;
+    if (state.url.includes('editar')) {
+
+      //alert('Você não tem autorização para acessar essa página');
+      //return false;
+    }
+    return true;
   }
 }

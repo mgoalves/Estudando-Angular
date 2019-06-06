@@ -1,3 +1,4 @@
+import { FormDeactive } from './../../model/form-deactive.class';
 import { Subscription } from 'rxjs';
 import { AlunosService } from './../alunos.service';
 import { ActivatedRoute } from '@angular/router';
@@ -8,7 +9,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   templateUrl: './alunos-form.component.html',
   styleUrls: ['./alunos-form.component.css']
 })
-export class AlunosFormComponent implements OnInit, OnDestroy {
+export class AlunosFormComponent implements OnInit, OnDestroy, FormDeactive {
 
   subscriptionActive: Subscription;
   aluno: any;

@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 
 const alunosROUTES: Routes = [
     {
-        path: 'alunos', component: AlunosComponent, children: [
+        path: '', component: AlunosComponent, children: [
             {path: 'novo', component: AlunosFormComponent},
             {path: ':id', component: AlunosDetalhesComponent},
             {path: ':id/editar', component: AlunosFormComponent}

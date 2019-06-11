@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { UsuarioComponent } from './../model/usuario.class.component';
+import { Usuario } from '../model/usuario.class';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class LoginService {
 
   }
 
-  realizarLogin(usuario: UsuarioComponent) {
+  realizarLogin(usuario: Usuario) {
 
     if (usuario.user === 'user@email.com' && usuario.password === '123') {
 

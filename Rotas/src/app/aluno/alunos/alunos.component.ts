@@ -1,3 +1,4 @@
+import { Aluno } from './../../model/aluno.class';
 import { AlunosService } from './../alunos.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class AlunosComponent implements OnInit, OnDestroy {
 
-  listaAlunos: any[] = [];
+  listaAlunos: Aluno[] = [];
 
   constructor(private alunosService: AlunosService) {
 

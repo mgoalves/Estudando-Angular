@@ -1,4 +1,4 @@
-import { UsuarioComponent } from './../model/usuario.class.component';
+import { Usuario } from '../model/usuario.class';
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from './login.service';
 
@@ -9,7 +9,7 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
 
-  usuario: UsuarioComponent = new UsuarioComponent();
+  usuario: Usuario = new Usuario();
 
   constructor(private loginService: LoginService) { }
 

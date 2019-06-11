@@ -1,3 +1,4 @@
+import { Aluno } from './../../model/aluno.class';
 import { FormDeactive } from './../../model/form-deactive.class';
 import { Subscription } from 'rxjs';
 import { AlunosService } from './../alunos.service';
@@ -12,7 +13,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class AlunosFormComponent implements OnInit, OnDestroy, FormDeactive {
 
   subscriptionActive: Subscription;
-  aluno: any;
+  aluno: Aluno;
   mudouValor: boolean = false;
 
   constructor(

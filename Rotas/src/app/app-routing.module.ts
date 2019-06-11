@@ -5,8 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: 'alunos', loadChildren: './aluno/alunos.module#AlunosModule', canActivate: [AuthGuard] },
-  { path: 'cursos', loadChildren: './curso/cursos.module#CursosModule', canActivate: [AuthGuard] },
+  { path: 'alunos', loadChildren: './aluno/alunos.module#AlunosModule', canActivate: [AuthGuard], canLoad: [AuthGuard] },
+  { path: 'cursos', loadChildren: './curso/cursos.module#CursosModule', canActivate: [AuthGuard], canLoad: [AuthGuard] },
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
 ];

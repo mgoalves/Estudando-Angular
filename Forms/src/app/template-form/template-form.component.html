@@ -1,13 +1,13 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
 	<div class="form-group">
 		<label for="nome">Nome</label>
 		<input type="text" class="form-control" id="nome" name="nome"
-			placeholder="Nome" ngModel>
+			placeholder="Nome" [ngModel]="usuario.nome">
 	</div>
 
 	<div class="form-group">
 		<label for="email">E-mail</label>
-		<input type="email" class="form-control" id="email" name="email" ngModel
+		<input type="email" class="form-control" id="email" name="email" [ngModel]="usuario.email"
 			placeholder="mail@mail.com" aria-describedby="emailHelp">
 		<small id="emailHelp" class="form-text text-muted">We'll never share your
 			email with anyone else.</small>

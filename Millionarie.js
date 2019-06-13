@@ -1,7 +1,17 @@
 function beMillionarie() {
-    for (i = 0; i < 6; i++) {
 
-        console.log(Math.floor(Math.random() * 100) + 1);
+    let nums = [];
+
+    while (nums.length < 6) {
+
+        let numAux = Math.floor(Math.random() * 100) + 1;
+
+        if (numAux > 0 && numAux <= 60) {
+            nums.push(numAux);
+        }
     }
+
+    nums.sort();
+    console.log(nums);
 }
 beMillionarie();

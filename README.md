@@ -37,16 +37,20 @@ Docs: https://angular.io/docs
 
 10 - Pipes ( | )
 	 https://angular.io/api - Commom
-	 Tem os pipes disponíveis pelo Angular.
+	 Tem os pipes disponíveis pelo Angular
 
-11 - Definindo LOCALE para a aplicação. No AppModule adicionar:
+13 - Nunca usar Pipes para realizar OrderBy ou Filtros.
+
+# Configurações Iniciais de Projeto
+
+01 - Definindo LOCALE para a aplicação. No AppModule adicionar:
+	 import localePt from '@angular/common/locales/pt'; - O import necessário
 	 registerLocaleData(localePt, 'pt'); - Antes da anotação @NgModule
 	 {provide: LOCALE_ID, useValue: 'pt'} - Dentro dos providers
 
-12 - Ao criar um projeto verificar se no AppModule, nos imports foi adicionado
-     o FormsModule que é responsável por um bocado de coisa importante.
 
-13 - Nunca usar Pipes para realizar OrderBy ou Filtros.
+02 - Ao criar um projeto verificar se no AppModule, nos imports foi adicionado
+     o FormsModule que é responsável por um bocado de coisa importante.
 
 # CLI
 

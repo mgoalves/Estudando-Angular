@@ -3,12 +3,11 @@
 		<div class="col-12">
 			<label for="nome">Nome</label>
 			<input
-				[class.is-invalid]="nome.invalid && nome.touched"
+				[class.is-invalid]="verificaInvalidTouched(nome)"
 				type="text" class="form-control" id="nome" name="nome"
 				placeholder="Nome" [ngModel]="usuario.nome" required #nome="ngModel">
 			<div
-				[ngClass]="{'invalid-feedback': 'nome.invalid && nome.touched',
-				'hidden': '!(nome.invalid && nome.touched)'}">
+				[ngClass]="aplicaCssMsgErro(nome)">
 				Informe o nome
 			</div>
 		</div>
@@ -18,12 +17,11 @@
 		<div class="col-12">
 			<label for="email">E-mail</label>
 			<input
-				[class.is-invalid]="email.invalid && email.touched"
+				[class.is-invalid]="verificaInvalidTouched(email)"
 				type="email" class="form-control" id="email" name="email"
 				[ngModel]="usuario.email"
 				placeholder="mail@mail.com" required email #email="ngModel">
-			<div [ngClass]="{'invalid-feedback': 'email.invalid && email.touched',
-				'hidden': '!(email.invalid && email.touched)'}">
+			<div [ngClass]="aplicaCssMsgErro(email)">
 				Informe um e-mail válido
 			</div>
 		</div>
@@ -33,24 +31,22 @@
 		<div class="col-sm-12 col-md-3 col-xl-3">
 			<label for="cep">CEP</label>
 			<input
-				[class.is-invalid]="cep.invalid && cep.touched"
+				[class.is-invalid]="verificaInvalidTouched(cep)"
 				type="text" class="form-control" id="cep" name="cep"
 				[ngModel]="usuario.endereco.cep"
 				placeholder="00000000" required #cep="ngModel">
-			<div [ngClass]="{'invalid-feedback': 'cep.invalid && cep.touched',
-				'hidden': '!(cep.invalid && cep.touched)'}">
+			<div [ngClass]="aplicaCssMsgErro(cep)">
 				Informe um CEP válido
 			</div>
 		</div>
 		<div class="col-sm-12 col-md-3 col-xl-3">
 			<label for="numero">Número</label>
 			<input
-				[class.is-invalid]="numero.invalid && numero.touched"
+				[class.is-invalid]="verificaInvalidTouched(numero)"
 				type="number" class="form-control" id="numero" name="numero"
 				[ngModel]="usuario.endereco.numero"
 				required #numero="ngModel">
-			<div [ngClass]="{'invalid-feedback': 'numero.invalid && numero.touched',
-				'hidden': '!(numero.invalid && numero.touched)'}">
+			<div [ngClass]="aplicaCssMsgErro(numero)">
 				O número é obrigatório.
 			</div>
 		</div>

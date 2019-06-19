@@ -1,3 +1,4 @@
+import { NgModel } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -29,5 +30,15 @@ export class TemplateFormComponent implements OnInit {
   onSubmit(form) {
     console.log(form);
     console.log(this.usuario);
+  }
+
+  verificaInvalidTouched(campo: NgModel): boolean {
+    return !campo.valid && campo.touched;
+  }
+  aplicaCssMsgErro(campo: NgModel) {
+    return {
+      'invalid-feedback': this.verificaInvalidTouched(campo),
+      'hidden': !this.verificaInvalidTouched(campo)
+    }
   }
 }

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DataFormComponent } from './data-form/data-form.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { registerLocaleData } from '@angular/common';
+import { FormDebugComponent } from './form-debug/form-debug.component';
 
 
 registerLocaleData(localePt, 'pt');
@@ -15,7 +16,8 @@ registerLocaleData(localePt, 'pt');
   declarations: [
     AppComponent,
     TemplateFormComponent,
-    DataFormComponent
+    DataFormComponent,
+    FormDebugComponent
   ],
   imports: [
     BrowserModule,

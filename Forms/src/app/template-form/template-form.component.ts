@@ -1,3 +1,4 @@
+import { CepService } from './../services/cep.service';
 import { NgModel } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -22,7 +23,7 @@ export class TemplateFormComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor(private cepService: CepService) { }
 
   ngOnInit() {
   }
@@ -35,10 +36,16 @@ export class TemplateFormComponent implements OnInit {
   verificaInvalidTouched(campo: NgModel): boolean {
     return !campo.valid && campo.touched;
   }
+
   aplicaCssMsgErro(campo: NgModel) {
     return {
       'invalid-feedback': this.verificaInvalidTouched(campo),
       'hidden': !this.verificaInvalidTouched(campo)
     }
+  }
+
+  buscaCEP(cep) {
+    console.log(cep);
+    this.cepService.consultaCep(cep);
   }
 }

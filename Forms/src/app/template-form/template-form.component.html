@@ -27,68 +27,70 @@
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-sm-12 col-md-3 col-xl-3">
-			<label for="cep">CEP</label>
-			<input
-				[class.is-invalid]="verificaInvalidTouched(cep)"
-				type="text" class="form-control" id="cep" name="cep"
-				[ngModel]="usuario.endereco.cep"
-				placeholder="00000000" required #cep="ngModel">
-			<div [ngClass]="aplicaCssMsgErro(cep)">
-				Informe um CEP válido
+	<div ngModelGroup="endereco">
+		<div class="row">
+			<div class="col-sm-12 col-md-3 col-xl-3">
+				<label for="cep">CEP</label>
+				<input
+					[class.is-invalid]="verificaInvalidTouched(cep)"
+					type="text" class="form-control" id="cep" name="cep"
+					[ngModel]="usuario.endereco.cep"
+					placeholder="00000000" required #cep="ngModel">
+				<div [ngClass]="aplicaCssMsgErro(cep)">
+					Informe um CEP válido
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-3 col-xl-3">
+				<label for="numero">Número</label>
+				<input
+					[class.is-invalid]="verificaInvalidTouched(numero)"
+					type="number" class="form-control" id="numero" name="numero"
+					[ngModel]="usuario.endereco.numero"
+					required #numero="ngModel">
+				<div [ngClass]="aplicaCssMsgErro(numero)">
+					O número é obrigatório.
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-6 col-xl-6">
+				<label for="complemento">Complemento</label>
+				<input
+					type="text" class="form-control" id="complemento" name="complemento"
+					[ngModel]="usuario.endereco.complemento"
+					#complemento="ngModel">
 			</div>
 		</div>
-		<div class="col-sm-12 col-md-3 col-xl-3">
-			<label for="numero">Número</label>
-			<input
-				[class.is-invalid]="verificaInvalidTouched(numero)"
-				type="number" class="form-control" id="numero" name="numero"
-				[ngModel]="usuario.endereco.numero"
-				required #numero="ngModel">
-			<div [ngClass]="aplicaCssMsgErro(numero)">
-				O número é obrigatório.
+
+		<div class="row">
+			<div class="col-12">
+				<label for="rua">Rua</label>
+				<input
+					type="text" class="form-control" id="rua" name="rua"
+					[ngModel]="usuario.endereco.rua" readonly #rua="ngModel">
 			</div>
 		</div>
-		<div class="col-sm-12 col-md-6 col-xl-6">
-			<label for="complemento">Complemento</label>
-			<input
-				type="text" class="form-control" id="complemento" name="complemento"
-				[ngModel]="usuario.endereco.complemento"
-				#complemento="ngModel">
-		</div>
-	</div>
 
-	<div class="row">
-		<div class="col-12">
-			<label for="rua">Rua</label>
-			<input
-				type="text" class="form-control" id="rua" name="rua"
-				[ngModel]="usuario.endereco.rua" readonly #rua="ngModel">
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-sm-12 col-md-5 col-xl-5">
-			<label for="bairro">Bairro</label>
-			<input
-				type="text" class="form-control" id="bairro" name="bairro"
-				[ngModel]="usuario.endereco.bairro" readonly
-				#bairro="ngModel">
-		</div>
-		<div class="col-sm-12 col-md-5 col-xl-5">
-			<label for="cidade">Cidade</label>
-			<input
-				type="text" class="form-control" id="cidade" name="cidade"
-				[ngModel]="usuario.endereco.cidade" readonly
-				#cidade="ngModel">
-		</div>
-		<div class="col-sm-12 col-md-2 col-xl-2">
-			<label for="estado">Estado</label>
-			<input
-				type="text" class="form-control" id="estado" name="estado"
-				[ngModel]="usuario.endereco.estado" readonly
-				#estado="ngModel">
+		<div class="row">
+			<div class="col-sm-12 col-md-5 col-xl-5">
+				<label for="bairro">Bairro</label>
+				<input
+					type="text" class="form-control" id="bairro" name="bairro"
+					[ngModel]="usuario.endereco.bairro" readonly
+					#bairro="ngModel">
+			</div>
+			<div class="col-sm-12 col-md-5 col-xl-5">
+				<label for="cidade">Cidade</label>
+				<input
+					type="text" class="form-control" id="cidade" name="cidade"
+					[ngModel]="usuario.endereco.cidade" readonly
+					#cidade="ngModel">
+			</div>
+			<div class="col-sm-12 col-md-2 col-xl-2">
+				<label for="estado">Estado</label>
+				<input
+					type="text" class="form-control" id="estado" name="estado"
+					[ngModel]="usuario.endereco.estado" readonly
+					#estado="ngModel">
+			</div>
 		</div>
 	</div>
 

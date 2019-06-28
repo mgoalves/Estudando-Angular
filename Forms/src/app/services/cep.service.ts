@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -11,7 +12,7 @@ export class CepService {
 
   }
 
-  consultaCep(cep: string) {
+  consultaCep(cep: string): Observable<any> {
 
     var cep = cep.replace(/\D/g, '');
 
@@ -24,8 +25,7 @@ export class CepService {
       //Valida o formato do CEP.
       if (validacep.test(cep)) {
 
-        this.httpClient.get(`https://viacep.com.br/ws/${cep}/json`)
-          .subscribe(data => { console.log(data); });
+        return this.httpClient.get(`https://viacep.com.br/ws/${cep}/json`);
       }
     }
   }

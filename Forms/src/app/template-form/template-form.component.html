@@ -36,7 +36,7 @@
 					type="text" class="form-control" id="cep" name="cep"
 					[ngModel]="usuario.endereco.cep"
 					placeholder="00000000" required #cep="ngModel"
-					(blur)="buscaCEP(cep.value)">
+					(blur)="buscaCEP(cep.value, f)">
 				<div [ngClass]="aplicaCssMsgErro(cep)">
 					Informe um CEP válido
 				</div>

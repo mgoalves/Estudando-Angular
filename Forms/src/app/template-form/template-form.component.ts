@@ -1,5 +1,5 @@
 import { CepService } from './../services/cep.service';
-import { NgModel } from '@angular/forms';
+import { NgModel, NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -44,8 +44,25 @@ export class TemplateFormComponent implements OnInit {
     }
   }
 
-  buscaCEP(cep) {
+  buscaCEP(cep, formulario: NgForm) {
+
     console.log(cep);
-    this.cepService.consultaCep(cep);
+    let cepSer = this.cepService.consultaCep(cep);
+    cepSer.subscribe(data => {
+
+      this.popularForm(data, formulario);
+    });
+  }
+
+  private popularForm(data, formulario: NgForm) {
+    formulario.form.patchValue({
+      endereco: {
+        cep: data.cep,
+        rua: data.logradouro,
+        bairro: data.bairro,
+        cidade: data.localidade,
+        estado: data.uf
+      }
+    });
   }
 }

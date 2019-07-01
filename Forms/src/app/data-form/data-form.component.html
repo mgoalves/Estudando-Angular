@@ -1,3 +1,76 @@
-<p>
-  data-form works!
-</p>
+<form [formGroup]="forms">
+  <div class="row">
+    <div class="col-12">
+      <label for="nome">Nome</label>
+      <input
+        type="text" class="form-control" id="nome" formControlName="nome"
+        placeholder="Nome">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <label for="email">E-mail</label>
+      <input
+        type="email" class="form-control" id="email" formControlName="email"
+        placeholder="mail@mail.com">
+    </div>
+  </div>
+
+  <!--
+  <div class="row">
+    <div class="col-sm-12 col-md-3 col-xl-3">
+      <label for="cep">CEP</label>
+      <input
+        type="text" class="form-control" id="cep" formControlName="cep"
+        placeholder="00000000">
+    </div>
+    <div class="col-sm-12 col-md-3 col-xl-3">
+      <label for="numero">Número</label>
+      <input
+        type="number" class="form-control" id="numero" formControlName="numero">
+    </div>
+    <div class="col-sm-12 col-md-6 col-xl-6">
+      <label for="complemento">Complemento</label>
+      <input
+        type="text" class="form-control" id="complemento" formControlName="complemento">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <label for="rua">Rua</label>
+      <input
+        type="text" class="form-control" id="rua" formControlName="rua"
+        readonly>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-5 col-xl-5">
+      <label for="bairro">Bairro</label>
+      <input
+        type="text" class="form-control" id="bairro" formControlName="bairro"
+        readonly>
+    </div>
+    <div class="col-sm-12 col-md-5 col-xl-5">
+      <label for="cidade">Cidade</label>
+      <input
+        type="text" class="form-control" id="cidade" formControlName="cidade"
+        readonly>
+    </div>
+    <div class="col-sm-12 col-md-2 col-xl-2">
+      <label for="estado">Estado</label>
+      <input
+        type="text" class="form-control" id="estado" formControlName="estado"
+        readonly>
+    </div>
+  </div>-->
+  <div class="row">
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </div>
+</form>
+
+<app-form-debug [formulario]="forms"></app-form-debug>

@@ -1,4 +1,4 @@
-<form [formGroup]="forms">
+<form [formGroup]="forms" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col-12">
       <label for="nome">Nome</label>

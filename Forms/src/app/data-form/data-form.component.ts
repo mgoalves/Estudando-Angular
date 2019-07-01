@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
@@ -10,7 +11,7 @@ export class DataFormComponent implements OnInit {
 
   forms: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient) {
 
   }
 
@@ -20,5 +21,14 @@ export class DataFormComponent implements OnInit {
       nome: [null],
       email: [null]
     });
+  }
+
+  onSubmit() {
+
+    this.httpClient.post('https://httpbin.org/post', JSON.stringify(this.forms.value)).subscribe(
+      res => {
+        console.log(res);
+      }
+    );
   }
 }

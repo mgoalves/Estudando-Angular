@@ -29,7 +29,7 @@ export class TemplateFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSubmit(form) {
+  onSubmit(form: NgForm) {
 
     this.httpClient.post('https://httpbin.org/post', JSON.stringify(form.value)).subscribe(
       res => {

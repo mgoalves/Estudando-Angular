@@ -48,9 +48,10 @@ Docs: https://angular.io/docs
 	 registerLocaleData(localePt, 'pt'); - Antes da anotação @NgModule
 	 {provide: LOCALE_ID, useValue: 'pt'} - Dentro dos providers
 
-
-02 - Ao criar um projeto verificar se no AppModule, nos imports foi adicionado
-     o FormsModule que é responsável por um bocado de coisa importante.
+02 - Adicionar no AppModule o tipo de formulário a ser usado:
+		Template: FormsModule
+		Component: ReactiveFormsModule
+	Por via das dúvidas add os 2 que da tudo certo (rs rs)
 
 # CLI
 

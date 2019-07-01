@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { CepService } from './../services/cep.service';
 import { NgModel, NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -23,14 +24,18 @@ export class TemplateFormComponent implements OnInit {
     }
   }
 
-  constructor(private cepService: CepService) { }
+  constructor(private cepService: CepService, private httpClient: HttpClient) { }
 
   ngOnInit() {
   }
 
   onSubmit(form) {
-    console.log(form);
-    console.log(this.usuario);
+
+    this.httpClient.post('https://httpbin.org/post', JSON.stringify(form.value)).subscribe(
+      res => {
+        console.log(res);
+      }
+    );
   }
 
   verificaInvalidTouched(campo: NgModel): boolean {
@@ -65,4 +70,5 @@ export class TemplateFormComponent implements OnInit {
       }
     });
   }
+
 }

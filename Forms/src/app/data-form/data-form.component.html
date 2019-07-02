@@ -27,23 +27,39 @@
     </div>
   </div>
 
-  <!--
+
   <div class="row">
     <div class="col-sm-12 col-md-3 col-xl-3">
       <label for="cep">CEP</label>
       <input
+        [class.is-invalid]="verificaInvalidTouched('cep')"
         type="text" class="form-control" id="cep" formControlName="cep"
         placeholder="00000000">
+      <div
+        [ngClass]="aplicaCssMsgErro('cep')">
+        Informe um cep válido
+      </div>
     </div>
     <div class="col-sm-12 col-md-3 col-xl-3">
       <label for="numero">Número</label>
       <input
+        [class.is-invalid]="verificaInvalidTouched('numero')"
         type="number" class="form-control" id="numero" formControlName="numero">
+      <div
+        [ngClass]="aplicaCssMsgErro('numero')">
+        Informe o número
+      </div>
     </div>
     <div class="col-sm-12 col-md-6 col-xl-6">
       <label for="complemento">Complemento</label>
       <input
-        type="text" class="form-control" id="complemento" formControlName="complemento">
+      [class.is-invalid]="verificaInvalidTouched('complemento')"
+        type="text" class="form-control" id="complemento"
+        formControlName="complemento">
+      <div
+        [ngClass]="aplicaCssMsgErro('complemento')">
+        Execedeu o quantidade máxima de caracteres
+      </div>
     </div>
   </div>
 
@@ -75,13 +91,15 @@
         type="text" class="form-control" id="estado" formControlName="estado"
         readonly>
     </div>
-  </div>-->
+  </div>
+
   <div class="row" style="margin-top: 10px">
     <div class="col-2">
       <button type="submit" class="btn btn-primary">Salvar</button>
       <button class="btn btn-secondary" (click)="resetForm()">Limpar</button>
     </div>
   </div>
+
 </form>
 
 <app-form-debug [formulario]="forms"></app-form-debug>

@@ -28,69 +28,74 @@
   </div>
 
 
-  <div class="row">
-    <div class="col-sm-12 col-md-3 col-xl-3">
-      <label for="cep">CEP</label>
-      <input
-        [class.is-invalid]="verificaInvalidTouched('cep')"
-        type="text" class="form-control" id="cep" formControlName="cep"
-        placeholder="00000000">
-      <div
-        [ngClass]="aplicaCssMsgErro('cep')">
-        Informe um cep válido
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-3 col-xl-3">
-      <label for="numero">Número</label>
-      <input
-        [class.is-invalid]="verificaInvalidTouched('numero')"
-        type="number" class="form-control" id="numero" formControlName="numero">
-      <div
-        [ngClass]="aplicaCssMsgErro('numero')">
-        Informe o número
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-6 col-xl-6">
-      <label for="complemento">Complemento</label>
-      <input
-      [class.is-invalid]="verificaInvalidTouched('complemento')"
-        type="text" class="form-control" id="complemento"
-        formControlName="complemento">
-      <div
-        [ngClass]="aplicaCssMsgErro('complemento')">
-        Execedeu o quantidade máxima de caracteres
-      </div>
-    </div>
-  </div>
+  <div formGroupName="endereco">
 
-  <div class="row">
-    <div class="col-12">
-      <label for="rua">Rua</label>
-      <input
-        type="text" class="form-control" id="rua" formControlName="rua"
-        readonly>
+    <div class="row">
+      <div class="col-sm-12 col-md-3 col-xl-3">
+        <label for="cep">CEP</label>
+        <input
+          [class.is-invalid]="verificaInvalidTouched('endereco.cep')"
+          type="text" class="form-control" id="cep" formControlName="cep"
+          placeholder="00000000">
+        <div
+          [ngClass]="aplicaCssMsgErro('endereco.cep')">
+          Informe um cep válido
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-3 col-xl-3">
+        <label for="numero">Número</label>
+        <input
+          [class.is-invalid]="verificaInvalidTouched('endereco.numero')"
+          type="number" class="form-control" id="numero"
+          formControlName="numero">
+        <div
+          [ngClass]="aplicaCssMsgErro('endereco.numero')">
+          Informe o número
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-xl-6">
+        <label for="complemento">Complemento</label>
+        <input
+          [class.is-invalid]="verificaInvalidTouched('endereco.complemento')"
+          type="text" class="form-control" id="complemento"
+          formControlName="complemento">
+        <div
+          [ngClass]="aplicaCssMsgErro('endereco.complemento')">
+          Execedeu o quantidade máxima de caracteres
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-sm-12 col-md-5 col-xl-5">
-      <label for="bairro">Bairro</label>
-      <input
-        type="text" class="form-control" id="bairro" formControlName="bairro"
-        readonly>
+    <div class="row">
+      <div class="col-12">
+        <label for="rua">Rua</label>
+        <input
+          type="text" class="form-control" id="rua" formControlName="rua"
+          readonly>
+      </div>
     </div>
-    <div class="col-sm-12 col-md-5 col-xl-5">
-      <label for="cidade">Cidade</label>
-      <input
-        type="text" class="form-control" id="cidade" formControlName="cidade"
-        readonly>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-5 col-xl-5">
+        <label for="bairro">Bairro</label>
+        <input
+          type="text" class="form-control" id="bairro" formControlName="bairro"
+          readonly>
+      </div>
+      <div class="col-sm-12 col-md-5 col-xl-5">
+        <label for="cidade">Cidade</label>
+        <input
+          type="text" class="form-control" id="cidade" formControlName="cidade"
+          readonly>
+      </div>
+      <div class="col-sm-12 col-md-2 col-xl-2">
+        <label for="estado">Estado</label>
+        <input
+          type="text" class="form-control" id="estado" formControlName="estado"
+          readonly>
+      </div>
     </div>
-    <div class="col-sm-12 col-md-2 col-xl-2">
-      <label for="estado">Estado</label>
-      <input
-        type="text" class="form-control" id="estado" formControlName="estado"
-        readonly>
-    </div>
+    
   </div>
 
   <div class="row" style="margin-top: 10px">

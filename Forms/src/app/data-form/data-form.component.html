@@ -3,8 +3,13 @@
     <div class="col-12">
       <label for="nome">Nome</label>
       <input
+        [class.is-invalid]="verificaInvalidTouched('nome')"
         type="text" class="form-control" id="nome" formControlName="nome"
         placeholder="Nome">
+      <div
+        [ngClass]="aplicaCssMsgErro('nome')">
+        Informe o nome
+      </div>
     </div>
   </div>
 
@@ -12,8 +17,13 @@
     <div class="col-12">
       <label for="email">E-mail</label>
       <input
+        [class.is-invalid]="verificaInvalidTouched('email')"
         type="email" class="form-control" id="email" formControlName="email"
         placeholder="mail@mail.com">
+      <div
+        [ngClass]="aplicaCssMsgErro('email')">
+        Informe um e-mail válido
+      </div>
     </div>
   </div>
 

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-data-form',
@@ -37,5 +37,16 @@ export class DataFormComponent implements OnInit {
 
   resetForm() {
     this.forms.reset();
+  }
+
+  verificaInvalidTouched(campo: string): boolean {
+    return !this.forms.get(campo).valid && this.forms.get(campo).touched;
+  }
+
+  aplicaCssMsgErro(campo: string) {
+    return {
+      'invalid-feedback': this.verificaInvalidTouched(campo),
+      'hidden': !this.verificaInvalidTouched(campo)
+    }
   }
 }

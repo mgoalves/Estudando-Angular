@@ -1,6 +1,7 @@
 # Anotações:
 
 Docs: https://angular.io/docs
+	  https://update.angular.io
 
 01 - Ao criar um módulo, precisa importar no AppModule. Caso crie no AngularCli 
     o import é automático.

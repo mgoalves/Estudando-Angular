@@ -15,7 +15,7 @@ export class CepService {
   consultaCep(cep: string): Observable<any> {
 
 
-    if (cep != null && cep != "") {
+    if (cep != null && cep !== "") {
 
       var cep = cep.replace(/\D/g, '');
 

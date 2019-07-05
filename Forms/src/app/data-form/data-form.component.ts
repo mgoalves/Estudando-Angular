@@ -39,27 +39,34 @@ export class DataFormComponent implements OnInit {
 
   onSubmit() {
 
-    this.httpClient.post('https://httpbin.org/post', JSON.stringify(this.forms.value)).subscribe(
-      res => {
-        this.resetForm();
-      },
-      error => {
-        alert('Erro');
-      }
-    );
+    if (this.forms.valid) {
+
+      this.httpClient.post('https://httpbin.org/post', JSON.stringify(this.forms.value)).subscribe(
+        res => {
+          this.resetForm();
+        },
+        error => {
+          alert('Erro');
+        }
+      );
+
+    } else {
+
+      this.verificaForm(this.forms);
+    }
   }
 
-  buscaCep() {
+  verificaForm(formGroup: FormGroup) {
 
-    let cep = this.forms.get('endereco.cep').value;
+    Object.keys(formGroup.controls).forEach(campo => {
 
-    this.cepService.consultaCep(cep).subscribe(
-      res => {
-        this.popularForm(res);
-      }, error => {
-        alert('CEP Inválido');
+      const controle = formGroup.get(campo);
+      controle.markAsTouched();
+
+      if (controle instanceof FormGroup) {
+        this.verificaForm(controle);
       }
-    );
+    });
   }
 
   private popularForm(data) {
@@ -78,8 +85,24 @@ export class DataFormComponent implements OnInit {
     this.forms.reset();
   }
 
+  buscaCep() {
+
+    let cep = this.forms.get('endereco.cep').value;
+
+    this.cepService.consultaCep(cep).subscribe(
+      res => {
+        this.popularForm(res);
+      },
+      error => {
+        this.forms.get('endereco.cep').setValue(null);
+        this.forms.get('endereco.cep').markAsTouched();
+      }
+    );
+  }
+
   verificaInvalidTouched(campo: string): boolean {
-    return !this.forms.get(campo).valid && this.forms.get(campo).touched;
+    return !this.forms.get(campo).valid &&
+      (this.forms.get(campo).touched || this.forms.get(campo).dirty);
   }
 
   aplicaCssMsgErro(campo: string) {

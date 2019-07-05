@@ -36,7 +36,7 @@
         <input
           [class.is-invalid]="verificaInvalidTouched('endereco.cep')"
           type="text" class="form-control" id="cep" formControlName="cep"
-          placeholder="00000000">
+          placeholder="00000000" (blur)="buscaCep()">
         <div
           [ngClass]="aplicaCssMsgErro('endereco.cep')">
           Informe um cep válido
@@ -95,7 +95,7 @@
           readonly>
       </div>
     </div>
-    
+
   </div>
 
   <div class="row" style="margin-top: 10px">

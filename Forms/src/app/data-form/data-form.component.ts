@@ -1,3 +1,4 @@
+import { CepService } from './../services/cep.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -11,7 +12,11 @@ export class DataFormComponent implements OnInit {
 
   forms: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private httpClient: HttpClient) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private httpClient: HttpClient,
+    private cepService: CepService
+  ) {
 
   }
 
@@ -21,7 +26,7 @@ export class DataFormComponent implements OnInit {
       nome: [null, [Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
       email: [null, [Validators.required, Validators.email]],
       endereco: this.formBuilder.group({
-        cep: [null, [Validators.required, Validators.maxLength(8), Validators.minLength(8)]],
+        cep: [null, [Validators.required, Validators.minLength(8), Validators.maxLength(9)]],
         numero: [null, [Validators.required]],
         complemento: [null, [Validators.maxLength(60)]],
         rua: [null, []],
@@ -42,6 +47,31 @@ export class DataFormComponent implements OnInit {
         alert('Erro');
       }
     );
+  }
+
+  buscaCep() {
+
+    let cep = this.forms.get('endereco.cep').value;
+
+    this.cepService.consultaCep(cep).subscribe(
+      res => {
+        this.popularForm(res);
+      }, error => {
+        alert('CEP Inválido');
+      }
+    );
+  }
+
+  private popularForm(data) {
+    this.forms.patchValue({
+      endereco: {
+        cep: data.cep,
+        rua: data.logradouro,
+        bairro: data.bairro,
+        cidade: data.localidade,
+        estado: data.uf
+      }
+    });
   }
 
   resetForm() {

@@ -90,9 +90,10 @@
       </div>
       <div class="col-sm-12 col-md-2 col-xl-2">
         <label for="estado">Estado</label>
-        <input
-          type="text" class="form-control" id="estado" formControlName="estado"
-          readonly>
+        <select
+          type="text" class="form-control" id="estado" formControlName="estado" readonly>
+          <option *ngFor="let est of estados" [value]="est.sigla">{{ est.nome }}</option>
+        </select>
       </div>
     </div>
 

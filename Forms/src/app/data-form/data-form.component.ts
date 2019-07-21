@@ -41,10 +41,10 @@ export class DataFormComponent implements OnInit {
         cep: [null, [Validators.required, Validators.minLength(8), Validators.maxLength(9)]],
         numero: [null, [Validators.required]],
         complemento: [null, [Validators.maxLength(60)]],
-        rua: [null, []],
-        bairro: [null, []],
-        cidade: [null, []],
-        estado: [null, []]
+        rua: [null, [Validators.required]],
+        bairro: [null, [Validators.required]],
+        cidade: [null, [Validators.required]],
+        estado: [null, [Validators.required]]
       })
     });
   }
